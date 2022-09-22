@@ -211,9 +211,16 @@ body {
         border-color: $border-color !important;
     }
     .timeline-comment {
-        color: $text-color !important;
         background-color: $comment-bg !important;
         border-color: $border-color !important;
+        
+        .comment-body {
+            color: $text-color !important;
+
+            a {
+                text-decoration: underline;
+            }
+        }
 
         &.current-user {
             background-color: $comment-bg !important;
@@ -300,7 +307,33 @@ body {
         background-color: transparent !important;
     }
 
-    .js-timeline-marker {
-        background-color: $bg-color !important;
+    // Comments on Discussions page
+    .discussion-timeline-item {
+        // The background color of main comments
+        .timeline-comment div.color-bg-default {
+            background-color: $comment-bg !important;
+            border-color: $light-border-color !important;
+        }
+
+        // The background color of nested comments
+        .timeline-comment div.color-bg-inset {
+            background-color: $comment-bg !important;
+        }
+
+        // The text box for the current user to type in
+        .review-thread-reply {
+            background-color: $comment-bg !important;
+            border-color: $light-border-color !important;
+        }
+
+        // User badge
+        .timeline-comment-header-text .Label {
+            border-color: $light-border-color !important;
+        }
+    }
+    
+    // Vertical ruler that runs between nested comments
+    .discussion-nested-comment-timeline-item:before {
+        background-color: $light-border-color !important;
     }
 }
