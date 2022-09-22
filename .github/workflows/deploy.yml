@@ -5,7 +5,7 @@ name: deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, deploy-on-github-action ]
 
 jobs:
   build:
